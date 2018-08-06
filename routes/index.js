@@ -6,14 +6,12 @@ var io = require('socket.io')(http);
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // res.render('index', { title: 'Express' });
-    res.send('200')
+    res.send(http)
+
 });
 
-io.on('connection', function(socket) {
-  console.log('a user connection');
-  socket.on('disconnect', function() {
-    console.log('user disconencet');
-  });
+io.on('connection', function(client) {
+
 });
 
 
