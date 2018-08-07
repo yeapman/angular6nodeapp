@@ -20,13 +20,13 @@ io.on('connection', function(socket) {
         // console.log('user disconnedcted');
     });
 
-    // setInterval(function(){ socket.emit('helloWorld', {for: 'everyone'})}, 3000);
+    setInterval(function(){ socket.emit('news', {for: 'everyone'})}, 3000);
 
-    socket.emit('news', { hello: 'world' });
+    // socket.emit('news', { hello: 'world' });
 
-    socket.on('my orher event', function(data) {
-       console.log(data);
-    });
+    // socket.on('my orher event', function(data) {
+    //    console.log(data);
+    // });
 
 
 
