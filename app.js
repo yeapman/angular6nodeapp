@@ -17,11 +17,20 @@ io.on('connection', function(socket) {
    // console.log('a user connected');
 
     socket.on('disconnect', function() {
-        console.log('user disconnedcted');
+        // console.log('user disconnedcted');
     });
-    var myData = ['lala', 'nana'];
-        setInterval(function(){ socket.emit('helloWorld', 'lala')}, 3000);
-})
+
+    // setInterval(function(){ socket.emit('helloWorld', {for: 'everyone'})}, 3000);
+
+    socket.emit('news', { hello: 'world' });
+
+    socket.on('my orher event', function(data) {
+       console.log(data);
+    });
+
+
+
+});
 
 
 
